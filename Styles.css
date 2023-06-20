@@ -1,0 +1,412 @@
+/* Styles for the entire website */
+
+
+/*media query targets screens with a minimum inline size of 768px (which usually corresponds to the width). Inside this media query, several elements are styled with a font size of 16px to ensure consistent text sizing.*/
+@media screen and (min-width: 768px){
+  body { font-size: 16px;}
+  header{ font-size: 16px;}
+  h1 {font-size: 16px;}
+  table  {font-size: 16px;}}
+
+/*media query targets screens with a maximum inline size of 767px. In this case, the header is centered using text-align: center, and the navigation menu is displayed as a block and centered as well. The list items of the menu are displayed as inline blocks with a margin of 10px between them.*/
+@media screen and (min-width: 767px) {
+  header {
+    text-align: center;}
+  nav ul {
+    display: block;
+    text-align: center;}
+  nav li {
+    display: inline-block;
+    margin-inline-end: 10px;}}
+
+/*media query adjusts the styling of the img element for screens with an inline size between 768px and 1023px. The image is given a width of 50px, aligned vertically to the super baseline, and a border-radius of 100% to make it circular. Margins and padding are set to 0, and there is additional styling for the #Projects table*/
+@media screen and (min-width: 768px) and (min-width: 1023px) {
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;}}
+
+
+
+/* define the general styling for the website. The body element has a font-family of Arial, sans-serif, and a background color of light blue*/
+body {
+  font-family: Arial, sans-serif;
+  background-color:white;
+  /*background-image: url("media/images/welcome.jpg");*/
+  background-repeat: no-repeat;
+  background-size: auto;}
+
+  
+.gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 10px;}
+.gallery img,
+.gallery-item video {
+          width: 100%;
+          height: auto;}
+  
+.gallery img:hover {
+            transform: scale(1.2); }
+      
+/*The header selector has a background color, color, padding, text alignment, box-shadow, width of 100%, and space-around justification. */
+header {
+  background-color: #ecdede;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 15px black;
+  width: 100%;
+  justify-content: space-around;}
+
+.container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;}
+.hobby{
+    align-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: bottom;}
+    
+.grid-container  {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-auto-rows: minmax(300px,auto);
+      grid-gap: 10px; 
+      padding: 10px;
+      }
+  
+.grid-main {
+        grid-row-start: 1;
+        grid-row-end: 3;}
+  
+.grid-right {
+      grid-row-start: 1;
+      grid-row-end: 3;}
+
+.blog-post {
+        background-color:transparent;
+        padding: 20px; }
+.new-post {
+        background-color: lightblue;
+        padding: 20px;}
+.new-post h2 {
+        margin-top: 0;}
+.new-post form {
+        display: grid;
+        grid-gap: 10px;}
+.new-post label {
+        font-weight: bold;}      
+.new-post textarea {
+        height: 100px;}
+button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;}    
+button:hover {
+        background-color: #555;}
+  
+/* define the general styling for the table and the rows  width, margin, padding, font sizr, background color, and text alignment */
+#Projects {
+  width: 50%;
+  margin: 0 auto;;
+  padding: 10px;}
+#Projects tr:nth-child(even){background-color: #c0b5b5;}
+#Projects tr {background-color: #f9f7f7;
+  font-size: 13px;}
+#Projects th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #537065;
+  color: white;
+  font-size: 14px;}
+
+
+/*class selector .Egy defines styling for an element with that class. It sets the maximum width to 100%, height to auto, and margin-bottom to 20px.*/
+.Egy-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;}
+
+/*The video selector is styled with margins, padding, and margin-left set to specific values.*/
+video{
+      margin: 20px;
+      padding: 0px;
+      margin-left: 0px;}
+
+/* The main selector has a width of 50%, centered using margin: 0 auto, and padding of 50px.*/
+main{
+     width: 50%;
+     margin: 0 auto;
+     padding: 50px;}
+
+/*The h1 selector is styled with margins, font size, text alignmrnt and color set to specific values.*/
+h1 {
+    color:#007bff;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 25px;}
+
+/*The h2 selector is styled with margins, padding, width and font size set to specific values.*/
+h2{
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 20px;}
+h3{
+      width: 50%;
+      margin: 0 auto;
+      padding: 10px;
+      color: #2196F3;
+      font-size: 18px;}
+/*The p selector is styled with font family and font size set to specific values.*/
+p {
+    font-family: verdana;
+    font-size: 13px;}
+
+/*The u1 in nav selector is styled margin, Padding, alignment and list style type set to specific values.*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: bottom;}
+
+
+/*The class selector profile-pic is styled margin, Padding, width and verticle alignment set to specific values.*/
+.profile-pic {
+    width: auto;
+    vertical-align: super;
+    margin: 0;
+    padding: 0;
+    border-radius: 20%;
+    margin-right: 0px;}
+
+/*The selector nav ul li is styled margin,display set to specific values.*/
+nav ul li {
+    display: inline-block;
+    margin-block-end: 10px;}
+
+/*The selector nav ul li a  is styled text decoration,color set to specific values.*/
+nav ul li a {
+    text-decoration: none;
+    color: #333;}
+
+/*The selector ul   is styled text width,margin and padding set to specific values.*/
+ul{
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;}
+section ul li a {
+  text-decoration: none;
+  color: #007bff;}
+section ul li a:hover {
+  text-decoration: underline;
+}
+.hobby {
+  margin-bottom: 30px;
+}
+
+.hobby-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin-bottom: 10px;
+}
+/*The selector footer is styled text background color, color and padding and text-alignment set to specific values.*/
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;}
+
+    div.gallery {
+      border: 1px solid #ccc;
+    }
+    
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+    
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+    
+    div.desc {
+      padding: 15px;
+      text-align: center;
+      font-size: 16pt;
+    }
+    
+    .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+    }
+   
+    @media only screen and (max-width: 700px) {
+      .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+      }
+    }
+    
+    @media only screen and (max-width: 500px) {
+      .responsive {
+        width: 100%;
+      }
+    }
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    } 
+    .gallery-h {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 10px;
+    }
+
+    .gallery-item-h {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+      overflow: hidden;
+    }
+
+    .gallery-item-h img,
+    .gallery-item-h video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }  
+    
+    .sidenav {
+      width: 130px;
+      position: fixed;
+      z-index: 1;
+      top: 20px;
+      left: 10px;
+      background: #eee;
+      overflow-x: hidden;
+      padding: 8px 0;
+    }
+    
+    .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #2196F3;
+      display: block;
+    }
+    
+    .sidenav a:hover {
+      color: #064579;
+    }
+    
+    .main {
+      margin-left: 140px; /* Same width as the sidebar + left position in px */
+      font-size: 28px; /* Increased text to enable scrolling */
+      padding: 0px 10px;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+
+    /* define the general styling for the checkbox-p the padding,margin-top and  font-size*/  
+.checkbox-p{
+  background-color:  #e1a48ddd;
+  padding: 10px;
+  margin-top: 70px;
+  font-size: 15px;}
+
+/* define the general styling for the form the padding,margin-top and  font-size*/  
+form {
+  margin: 5px auto;
+  max-width: 400px;
+  max-height:fit-content;
+  border-style:groove;
+  padding: 30px;
+  background-color:bisque;}
+
+/* define the general styling for the label the display and bottom*/  
+label {
+  display: block;
+  margin-bottom: 5px;}
+
+/* define the general styling for the form-container the border-radius and margin*/      
+.form-container {
+  border-radius: 5px;
+  padding: 0 ;
+  margin: auto;}
+
+/* define the general styling for the input[type="text"] the border-radius, padding and border-radius */      
+input[type="text"]{
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 15px;}
+
+/* define the general styling for the input[type=text]:focus thebackground-color*/      
+input[type=text]:focus {
+  background-color: rgb(215, 241, 249);}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;}
+  .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  .form-group textarea {
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  .form-group button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }

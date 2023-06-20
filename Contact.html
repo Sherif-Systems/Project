@@ -1,0 +1,73 @@
+<!DOCTYPE html> <!-- Define the document type as HTML5-->
+<html lang="en-us">  <!--  The root element of an HTML document with English -->
+<head>  <!--  The root element of an HTML document -->
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact</title>
+	<link rel="stylesheet" href="Styles.css">
+</head>
+<body class="body-contact">  <!--  Contains the visible content of the web page -->
+	<header> 
+		<nav><!-- Defines a navigation section containing navigation links -->
+			<ul> <!--  unordered list -->
+				<li><a href="index.html">Home</a></li> 		<!-- hyperlink to Home page-->
+				<li><a href="Projects.html">Projects</a></li>  <!-- hyperlink to Projects page-->
+				<li><a href="WebDevelopment.html">WebDevelopment</a></li><!-- hyperlink to WebDevelopment page-->
+				<li><a href="Egypt.html">Egypt</a></li> <!-- hyperlink to My Country - Egypt page-->
+				<li><a href="blog.html">Blog</a></li> <!-- hyperlink to blogs - blogs page-->
+				<li><a href="Hobbies.html">Habbies</a></li> <!-- hyperlink to My Habbies page-->
+				<li><a href="Contact.html">Contact</a></li> <!-- hyperlink to contact page-->
+				<li><a href="About.html">About</a></li> 	<!-- hyperlink to About page-->
+			</ul>
+		</nav>
+	 </header>
+	 <main>
+		<img  class="profile-pic" src="Media/images/profile-pic.png" alt="Profile Picture">
+	 </main>
+	 <div class="grid-container">
+	<main class="grid-main"><!-- the  main content-->
+		<h1>Contact Me</h1> <!-- heading level 1 -->
+		<p>Feel free to contact me with any questions or comments you may have about my website. I am always happy to hear from my visitors.</p>
+		
+		<ul> <!-- unsorted list of my contact-->
+			<li>Email: shzeyada@bu.com</li>
+			<li>Phone: 774-312-8892</li>
+		</ul>
+		
+		<p>Don't forget to follow me on social media!</p>
+		<!-- hyperlink to my linkedin account-->
+		<a href="https://www.linkedin.com/in/sherif-zeyada-3225508a"><img src="Media/images/linkedin-logo.png" alt="linkedin" width="20" height="20"></a>
+		<P>Please use the Form bellow to send me a massage and will get back to you as soon as I can. Thank you</P>
+	</main>
+	<div class="grid-right">
+		<div id="app" class="form-container">
+			<form @submit.prevent="submitForm">
+			  <div class="form-group">
+				<label for="name">Name:</label>
+				<input type="text" id="name" v-model="name" required>
+			  </div>
+			  <div class="form-group">
+				<label for="email">Email:</label>
+				<input type="email" id="email" v-model="email" required>
+			  </div>
+			  <div class="form-group">
+				<label for="message">Message:</label>
+				<textarea id="message" v-model="message" required></textarea>
+			  </div>
+			  <div class="form-group">
+				<button type="submit">Submit</button>
+			  </div>
+			</form>
+		  </div>
+		
+		  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+		<p id="thankYouMessage" class="hidden">Thank you for your message!</p>
+	  </div>
+	</div>
+	<footer> <!-- a footer for the document -->
+		<p>&copy; 2023 My Website</p>
+	</footer>
+	<script src="VueCont.js"></script>
+</body>
+</html>

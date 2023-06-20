@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Page</title>
+  <script src="https://unpkg.com/vue@2.6.14"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header> 
+    <nav><!-- Defines a navigation section containing navigation links -->
+			<ul> <!--  unordered list -->
+				<li><a href="index.html">Home</a></li> 		<!-- hyperlink to Home page-->
+				<li><a href="Projects.html">Projects</a></li>  <!-- hyperlink to Projects page-->
+				<li><a href="WebDevelopment.html">WebDevelopment</a></li><!-- hyperlink to WebDevelopment page-->
+				<li><a href="Egypt.html">Egypt</a></li> <!-- hyperlink to My Country - Egypt page-->
+				<li><a href="blog.html">Blog</a></li> <!-- hyperlink to blogs - blogs page-->
+				<li><a href="Hobbies.html">Habbies</a></li> <!-- hyperlink to My Habbies page-->
+				<li><a href="Contact.html">Contact</a></li> <!-- hyperlink to contact page-->
+				<li><a href="About.html">About</a></li> 	<!-- hyperlink to About page-->
+			</ul>
+    </nav>
+     </header>
+    <main>
+        <img  class="profile-pic" src="Media/images/profile-pic.png" alt="Profile Picture">
+    </main>
+        <div id="app">
+            <h1>My Blog</h1> <!-- Blog Form -->
+            <form @submit.prevent="addBlog">
+            <input type="text" v-model="newBlog.title" placeholder="Title" required>
+            <textarea v-model="newBlog.content" placeholder="Content" required></textarea>
+            <button type="submit">Add Blog</button>
+            </form> <!-- Blog List -->
+            <ul>
+            <li v-for="(blog, index) in blogs" :key="index">
+                <h2>{{ blog.title }}</h2>
+                <p>{{ blog.content }}</p>
+                <button @click="deleteBlog(index)">Delete</button>
+            </li>
+            </ul>
+        </div>
+    
+  <script src="VueApp.js"></script>
+</body>
+
+</html>
